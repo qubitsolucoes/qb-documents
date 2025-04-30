@@ -4,6 +4,18 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Description>Provides models to handle documents using Qubit.Documents.Core</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Title>Qubit.Documents.Models</Title>
+        <Authors>Hugo Lamounier</Authors>
+        <PackageProjectUrl>https://github.com/qubitsolucoes/qb-documents</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/qubitsolucoes/qb-documents</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <AssemblyName>Qubit.Documents.Models</AssemblyName>
+        <RootNamespace>Qubit.Documents.Models</RootNamespace>
+        <IsPackable>true</IsPackable>
+        <Version>0.1.0</Version>
     </PropertyGroup>
 
     <ItemGroup>

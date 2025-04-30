@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qubit.Documents.Models", "src\Qubit.Documents.Models\Qubit.Documents.Models.csproj", "{4E13022B-4166-4517-BEEB-12309C3EE519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qubit.Documents.Core", "Qubit.Documents.Core\Qubit.Documents.Core.csproj", "{AE4F38D5-BF5B-4354-8659-CBBFE66D6419}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DB94B7DF-3371-4FE9-96E0-C8F01113E5C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qubit.Documents.Core.Tests", "Qubit.Documents.Core.Tests\Qubit.Documents.Core.Tests.csproj", "{120EC449-87CB-4B64-BB47-C61F1D378FB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E13022B-4166-4517-BEEB-12309C3EE519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E13022B-4166-4517-BEEB-12309C3EE519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E13022B-4166-4517-BEEB-12309C3EE519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E13022B-4166-4517-BEEB-12309C3EE519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4F38D5-BF5B-4354-8659-CBBFE66D6419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4F38D5-BF5B-4354-8659-CBBFE66D6419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4F38D5-BF5B-4354-8659-CBBFE66D6419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4F38D5-BF5B-4354-8659-CBBFE66D6419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120EC449-87CB-4B64-BB47-C61F1D378FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120EC449-87CB-4B64-BB47-C61F1D378FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120EC449-87CB-4B64-BB47-C61F1D378FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120EC449-87CB-4B64-BB47-C61F1D378FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{120EC449-87CB-4B64-BB47-C61F1D378FB7} = {DB94B7DF-3371-4FE9-96E0-C8F01113E5C7}
+	EndGlobalSection
+EndGlobal

@@ -6,7 +6,6 @@
         <Nullable>enable</Nullable>
         <Description>Provides tools to handle documents</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Title>Qubit.Documents.Core</Title>
         <Authors>Hugo Lamounier</Authors>
         <PackageProjectUrl>https://github.com/qubitsolucoes/qb-documents</PackageProjectUrl>

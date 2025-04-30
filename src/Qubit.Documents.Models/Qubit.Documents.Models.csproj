@@ -6,7 +6,6 @@
         <Nullable>enable</Nullable>
         <Description>Provides models to handle documents using Qubit.Documents.Core</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Title>Qubit.Documents.Models</Title>
         <Authors>Hugo Lamounier</Authors>
         <PackageProjectUrl>https://github.com/qubitsolucoes/qb-documents</PackageProjectUrl>

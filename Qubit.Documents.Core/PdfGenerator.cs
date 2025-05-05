@@ -10,7 +10,7 @@ public class PdfGenerator(ILogger<PdfGenerator> logger): IPdfGenerator
     {
         try
         {
-            logger.LogInformation("Converting request {RequestType} to HTML", typeof(T).Name);
+            logger.LogInformation("Converting request {RequestType} to PDF", typeof(T).Name);
             
             var result = await RazorGenerator<T>.CreatePdfAsync(request);
 
@@ -18,7 +18,7 @@ public class PdfGenerator(ILogger<PdfGenerator> logger): IPdfGenerator
         }
         catch (Exception e)
         {
-            logger.LogError(e, "Error converting request {RequestType} to pdf", typeof(T).Name);
+            logger.LogError(e, "Error converting request {RequestType} to PDF", typeof(T).Name);
             throw;
         }
     }

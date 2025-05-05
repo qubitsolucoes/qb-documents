@@ -10,9 +10,9 @@ public class PdfGenerator(ILogger<PdfGenerator> logger): IPdfGenerator
     {
         try
         {
-            logger.LogInformation("Converting request {RequestType} to pdf", typeof(T).Name);
+            logger.LogInformation("Converting request {RequestType} to HTML", typeof(T).Name);
             
-            var result = await RazorPdfGenerator<T>.CreateAsync(request);
+            var result = await RazorGenerator<T>.CreatePdfAsync(request);
 
             return new FileStream(result, FileMode.Open, FileAccess.Read, FileShare.Read);
         }

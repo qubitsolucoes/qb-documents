@@ -4,12 +4,22 @@ using RazorLight;
 
 namespace Qubit.Documents.Core;
 
-internal static class RazorPdfGenerator<T> where T : BaseRequest
+internal static class RazorGenerator<T> where T : BaseRequest
 {
-    public static async Task<string> CreateAsync(T request)
+    public static async Task<string> CreatePdfAsync(T request)
     {
         var tempFile = Path.GetTempFileName();
         
+        var html = await CreateHtmlAsync(request);
+        
+        await using var outputFileStream = new FileStream(tempFile, FileMode.Create, FileAccess.Write);
+        iText.Html2pdf.HtmlConverter.ConvertToPdf(html, outputFileStream);
+        
+        return tempFile;
+    }
+
+    public static Task<string> CreateHtmlAsync(T request)
+    {
         var resourceNames = request.ExecutingAssembly.GetManifestResourceNames();
         
         if(!resourceNames.Contains(request.ResourceName))
@@ -20,11 +30,6 @@ internal static class RazorPdfGenerator<T> where T : BaseRequest
             .UseMemoryCachingProvider()
             .Build();
         
-        var html =  await razorLight.CompileRenderAsync(request.ResourceName, request);
-        
-        await using var outputFileStream = new FileStream(tempFile, FileMode.Create, FileAccess.Write);
-        iText.Html2pdf.HtmlConverter.ConvertToPdf(html, outputFileStream);
-        
-        return tempFile;
+        return razorLight.CompileRenderAsync(request.ResourceName, request);
     }
 }

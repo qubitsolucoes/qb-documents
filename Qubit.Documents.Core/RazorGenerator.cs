@@ -1,4 +1,6 @@
-﻿using Qubit.Documents.Models;
+﻿using System.Collections.Concurrent;
+using System.Reflection;
+using Qubit.Documents.Models;
 using Qubit.Documents.Models.Requests;
 using RazorLight;
 
@@ -6,6 +8,8 @@ namespace Qubit.Documents.Core;
 
 internal static class RazorGenerator<T> where T : BaseRequest
 {
+    private static readonly ConcurrentDictionary<Assembly, RazorLightEngine> EngineCache = new();
+    
     public static async Task<string> CreatePdfAsync(T request)
     {
         var tempFile = Path.GetTempFileName();
@@ -24,11 +28,11 @@ internal static class RazorGenerator<T> where T : BaseRequest
         
         if(!resourceNames.Contains(request.ResourceName))
             throw new QubitDocumentsException("RazorPdfGenerator - The requested template could not be found.");
-        
-        var razorLight = new RazorLightEngineBuilder()
+
+        var razorLight = EngineCache.GetOrAdd(request.ExecutingAssembly, _ => new RazorLightEngineBuilder()
             .UseEmbeddedResourcesProject(request.ExecutingAssembly)
             .UseMemoryCachingProvider()
-            .Build();
+            .Build());
         
         return razorLight.CompileRenderAsync(request.ResourceName, request);
     }

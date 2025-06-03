@@ -14,7 +14,7 @@
         <AssemblyName>Qubit.Documents.Models</AssemblyName>
         <RootNamespace>Qubit.Documents.Models</RootNamespace>
         <IsPackable>true</IsPackable>
-        <Version>0.3.0</Version>
+        <Version>0.4.0</Version>
     </PropertyGroup>
 
     <ItemGroup>

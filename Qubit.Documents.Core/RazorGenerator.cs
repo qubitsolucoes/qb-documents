@@ -31,7 +31,6 @@ internal static class RazorGenerator<T> where T : BaseRequest
 
         var razorLight = EngineCache.GetOrAdd(request.ExecutingAssembly, _ => new RazorLightEngineBuilder()
             .UseEmbeddedResourcesProject(request.ExecutingAssembly)
-            .UseMemoryCachingProvider()
             .Build());
         
         return razorLight.CompileRenderAsync(request.ResourceName, request);

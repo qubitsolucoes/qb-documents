@@ -1,27 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <Description>Provides tools to handle documents</Description>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Title>Qubit.Documents.Core</Title>
-        <Authors>Hugo Lamounier</Authors>
-        <PackageProjectUrl>https://github.com/qubitsolucoes/qb-documents</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/qubitsolucoes/qb-documents</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
         <AssemblyName>Qubit.Documents.Core</AssemblyName>
         <RootNamespace>Qubit.Documents.Core</RootNamespace>
         <IsPackable>true</IsPackable>
-        <Version>0.4.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
-        <PackageReference Include="itext7" Version="9.1.0" />
-        <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.1.0" />
-        <PackageReference Include="itext7.pdfhtml" Version="6.1.0" />
+        <PackageReference Include="itext7" Version="9.2.0" />
+        <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.2.0" />
+        <PackageReference Include="itext7.pdfhtml" Version="6.2.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="OpenXmlPowerTools" Version="4.5.3.2" />

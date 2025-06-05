@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>0.5.0</Version>
+        <PackageProjectUrl>https://github.com/qubitsolucoes/qb-documents</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/qubitsolucoes/qb-documents</RepositoryUrl>
+        <Authors>Hugo Lamounier</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryType>Git</RepositoryType>
+    </PropertyGroup>
+</Project>

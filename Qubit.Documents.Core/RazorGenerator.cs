@@ -1,5 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Reflection;
+using System.Text;
+using iText.Html2pdf;
 using Qubit.Documents.Models;
 using Qubit.Documents.Models.Requests;
 using RazorLight;
@@ -13,12 +15,13 @@ internal static class RazorGenerator<T> where T : BaseRequest
     public static async Task<string> CreatePdfAsync(T request)
     {
         var tempFile = Path.GetTempFileName();
-        
+
         var html = await CreateHtmlAsync(request);
-        
+
         await using var outputFileStream = new FileStream(tempFile, FileMode.Create, FileAccess.Write);
-        iText.Html2pdf.HtmlConverter.ConvertToPdf(html, outputFileStream);
-        
+        await using var inputStream = new MemoryStream(Encoding.UTF8.GetBytes(html));
+        HtmlConverter.ConvertToPdf(inputStream, outputFileStream);
+
         return tempFile;
     }
 
